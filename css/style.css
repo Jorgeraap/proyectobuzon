@@ -1,5 +1,5 @@
 :root {
-  --rojo: #b0121a;
+  --rojo: #ec6f75;
   --rojo-oscuro: #7e0d13;
   --rojo-suave: #fbe9ea;
   --rojo-borde: #e7b9bb;
@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   background: var(--fondo);
   color: var(--gris-texto);
   line-height: 1.5;
