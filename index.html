@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buzón CUC Escucha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-mark">CUC</div>
+      <div class="header-text">
+        <h1>Buzón CUC Escucha</h1>
+        <p>Tu voz mejora la Facultad de Ingeniería</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="intro-card">
+      <h2>Cuéntanos tu idea o sugerencia</h2>
+      <p>
+        Este espacio permite a los estudiantes registrar sugerencias sobre bienestar,
+        servicios, clases, inclusión, espacios y procesos académicos. Toda sugerencia
+        queda registrada localmente con fecha y hora, y puedes descargar el registro
+        completo cuando lo necesites.
+      </p>
+    </section>
+
+    <section class="form-card">
+      <form id="buzon-form" novalidate>
+
+        <div class="field">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Martínez" required />
+        </div>
+
+        <div class="field">
+          <label for="codigo">Código estudiantil</label>
+          <input type="text" id="codigo" name="codigo" placeholder="Ej: 100012345" required />
+        </div>
+
+        <div class="field">
+          <label for="categoria">Categoría de la sugerencia</label>
+          <select id="categoria" name="categoria" required>
+            <option value="" disabled selected>Selecciona una categoría</option>
+            <option value="Bienestar">Bienestar</option>
+            <option value="Servicios">Servicios</option>
+            <option value="Clases">Clases</option>
+            <option value="Inclusión">Inclusión</option>
+            <option value="Espacios">Espacios</option>
+            <option value="Procesos académicos">Procesos académicos</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="programa">Programa académico</label>
+          <input type="text" id="programa" name="programa" placeholder="Ej: Ingeniería de Sistemas" required />
+        </div>
+
+        <div class="field">
+          <label for="mensaje">Sugerencia</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu idea o sugerencia..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Enviar sugerencia</button>
+        <p id="form-status" class="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="records-card">
+      <div class="records-header">
+        <h2>Sugerencias registradas <span id="contador">(0)</span></h2>
+        <div class="records-actions">
+          <button id="btn-descargar" class="btn-secondary">Descargar archivo completo</button>
+          <button id="btn-borrar" class="btn-danger-outline">Borrar registros locales</button>
+        </div>
+      </div>
+      <p class="records-note">
+        Las sugerencias se guardan en este navegador. El botón "Descargar archivo completo"
+        genera un único archivo de texto con todas las sugerencias, enumeradas y ordenadas
+        por fecha y hora de envío.
+      </p>
+      <ul id="lista-sugerencias" class="lista-sugerencias"></ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Buzón CUC Escucha · Universidad de la Costa · Facultad de Ingeniería</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
